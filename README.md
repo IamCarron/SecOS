@@ -32,7 +32,10 @@ Unlike custom Windows ISOs, Atlas is more straightforward to audit due to the us
 
 Playbooks are renamed **.zip** archives, with the password [`malte`](https://docs.ameliorated.io/developers/getting-started/creation.html). As they primarily consist of plain text, Playbooks enable transparency, unlike custom Windows ISOs, which have many entry points for malicious activity. The few binaries in the Playbook are open source in our [`utilities` repository](https://github.com/Atlas-OS/utilities), with the [hashes listed here](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md).
 
-Although the GUI is not open source for AME Wizard, AME Wizard's entire backend (called [TrustedUninstaller](https://github.com/Ameliorated-LLC/trusted-uninstaller-cli)) is open source under MIT, which contains each action used to run SecOS. The Atlas Playbook is open source under the [GPLv3 license](https://github.com/iamcarron/SecOS/blob/main/LICENSE).
+Although the GUI is not open source for AME Wizard, AME Wizard's entire backend (called [TrustedUninstaller](https://github.com/Ameliorated-LLC/trusted-uninstaller-cli)) is open source under MIT, which contains each action used to run SecOS. The SecOS Playbook is open source under the [GPLv3 license](https://github.com/iamcarron/SecOS/blob/main/LICENSE).
 
 ### 🔒 Legal Compliance
-As Atlas doesn't redistribute a modified Windows ISO, it complies with [Windows's Usage Terms](https://www.microsoft.com/en-us/Useterms/Retail/Windows/10/UseTerms_Retail_Windows_10_English.htm). In addition, Atlas does not alter activation in Windows.
+As SecOS doesn't redistribute a modified Windows ISO, it complies with [Windows's Usage Terms](https://www.microsoft.com/en-us/Useterms/Retail/Windows/10/UseTerms_Retail_Windows_10_English.htm). In addition, SecOS does not alter activation in Windows.
+
+### 🤝 Contribution
+SecOS arises as a project for a class work, so it is not guaranteed to have recurring updates and very often, so any contribution is appreciated!
