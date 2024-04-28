@@ -1,0 +1,13 @@
+title: Disable Remote Desktop
+description: Disable Remote Desktop to enhance system security and prevent unauthorized access.
+actions:
+  - !registryValue:
+      path: 'HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server'
+      value: 'fDenyTSConnections'
+      data: '1'
+      type: REG_DWORD
+  - !registryValue:
+      path: 'HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp'
+      value: 'UserAuthentication'
+      data: '1'
+      type: REG_DWORD

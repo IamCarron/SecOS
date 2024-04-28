@@ -1,6 +1,6 @@
 ---
 title: Tweaks Root Playbook File
-description: Runs all of the Atlas playbook tweaks
+description: Runs all of the SecOS playbook tweaks
 actions: []
 tasks:
   # ------------------------- NOTES ------------------------- #
@@ -27,6 +27,8 @@ tasks:
   - tweaks\statuses\status-networking.yml
   - tweaks\networking\disable-llmnr.yml
   - tweaks\networking\atlas-network-settings.yml
+  - tweaks\networking\block-incoming-connections.yml
+  - tweaks\networking\set-adguarddns.yml
 
   # -------------------------------------------------------------------------- #
   #  networking\shares                                                         #
@@ -34,8 +36,7 @@ tasks:
   - tweaks\networking\shares\restrict-anonymous-access.yml
   - tweaks\networking\shares\restrict-anonymous-enumeration.yml
   - tweaks\networking\shares\disable-smb-bandwidth-throttling.yml
-
-
+  - tweaks\networking\shares\disable-smb-protocols.yml
 
   # -----------------------------------------------------
   #                      Performance
@@ -54,7 +55,6 @@ tasks:
   - tweaks\performance\disable-fth.yml
   - tweaks\performance\disable-sleep-study.yml
 
-
   # -------------------------------------------------------------------------- #
   #  performance\system                                                        #
   # -------------------------------------------------------------------------- #
@@ -63,8 +63,6 @@ tasks:
   - tweaks\performance\system\optimize-ntfs.yml
   - tweaks\performance\system\disable-service-host-split.yml
   - tweaks\performance\system\win32-priority-seperation.yml
-
-
 
   # -----------------------------------------------------
   #                        Privacy
@@ -124,8 +122,6 @@ tasks:
   - tweaks\privacy\telemetry\disable-input-telemetry.yml
   - tweaks\privacy\telemetry\disallow-data-collection.yml
 
-
-
   # -----------------------------------------------------
   #                          QOL
   # -----------------------------------------------------
@@ -146,7 +142,6 @@ tasks:
   - tweaks\qol\disable-mouse-accel.yml
   - tweaks\qol\disable-settings-tips.yml
   - tweaks\qol\disable-spell-checking.yml
-  - tweaks\qol\disable-store-auto-updates.yml
   - tweaks\qol\disable-touch-keyboard-features.yml
   - tweaks\qol\disable-touch-visual-feedback.yml
   - tweaks\qol\disable-usb-issues-notifications.yml
@@ -173,7 +168,6 @@ tasks:
   - tweaks\qol\windows-update\disable-insider.yml
   - tweaks\qol\windows-update\disable-msrt-telemetry.yml
   - tweaks\qol\windows-update\disable-feature-updates.yml
-  - tweaks\qol\windows-update\disable-auto-updates.yml
   - tweaks\qol\windows-update\disable-auto-reboot.yml
   - tweaks\qol\windows-update\disable-delivery-optimization.yml
 
@@ -233,11 +227,6 @@ tasks:
   - tweaks\qol\explorer\remove-context-menus\troubleshooting-compat.yml
 
   # -------------------------------------------------------------------------- #
-  #  qol\security                                                              #
-  # -------------------------------------------------------------------------- #
-  - tweaks\qol\security\disable-uac-secure-desktop.yml
-
-  # -------------------------------------------------------------------------- #
   #  qol\shell                                                                 #
   # -------------------------------------------------------------------------- #
   - tweaks\qol\shell\alt-tab-open-windows.yml
@@ -283,8 +272,6 @@ tasks:
   - tweaks\qol\taskbar\set-to-left.yml
   - tweaks\qol\taskbar\end-task.yml
 
-
-
   # -----------------------------------------------------
   #                       Security
   # -----------------------------------------------------
@@ -297,8 +284,10 @@ tasks:
   - tweaks\security\block-anonymous-enum-sam.yml
   - tweaks\security\delete-defaultuser0.yml
   - tweaks\security\disable-remote-assistance.yml
-
-
+  - tweaks\security\disable-ipv6.yml
+  - tweaks\security\disable-remote-desktop.yml
+  - tweaks\security\enable-pua-protection.yml
+  - tweaks\security\uac-maximum.yml
 
   # -----------------------------------------------------
   #                        Debloat
@@ -314,8 +303,6 @@ tasks:
   - tweaks\debloat\disable-scheduled-tasks.yml
   - tweaks\debloat\hide-unused-security-pages.yml
   - tweaks\debloat\config-storage-sense.yml
-
-
 
   # -----------------------------------------------------
   #                        Scripts
@@ -335,8 +322,6 @@ tasks:
   - tweaks\scripts\script-backup2.yml
   - tweaks\scripts\script-clientcbs.yml
 
-
-
   # -----------------------------------------------------
   #                         Misc
   # -----------------------------------------------------
@@ -348,7 +333,6 @@ tasks:
   - tweaks\statuses\status-misc.yml
   - tweaks\misc\config-time.yml
   - tweaks\misc\delete-windows-specific-files.yml
-  - tweaks\misc\config-oem-information.yml
   - tweaks\misc\rebuild-perf-counters.yml
   - tweaks\misc\create-shortcuts.yml
   - tweaks\misc\add-music-videos-to-home.yml

@@ -1,0 +1,9 @@
+---
+title: Configure AdguardDNS
+description: Set the DNS server to AdguardDNS for improved privacy and security.
+actions:
+  - !registryValue:
+      path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{InterfaceGUID}'
+      value: 'NameServer'
+      data: '94.140.14.14,94.140.15.15'
+      type: REG_SZ

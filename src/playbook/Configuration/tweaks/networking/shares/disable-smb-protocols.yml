@@ -1,0 +1,8 @@
+---
+title: Disable SMB Protocols
+description: Disabling SMB protocols to enhance the security of the Windows system and minimize vulnerabilities.
+actions:
+  - !run: {exe: 'powershell', args: 'Set-SmbServerConfiguration -EnableSMB1Protocol $false -Confirm:$false'}
+  - !run: {exe: 'powershell', args: 'Set-SmbServerConfiguration -EnableSMB2Protocol $false -Confirm:$false'}
+
+

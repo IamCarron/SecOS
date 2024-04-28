@@ -1,0 +1,24 @@
+---
+title: Set User Account Control (UAC) to Maximum
+description: To enhance system security, UAC is set to its highest level, requiring the user's permission for all actions.
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+    value: 'ConsentPromptBehaviorAdmin'
+    data: '2'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+    value: 'ConsentPromptBehaviorUser'
+    data: '1'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+    value: 'EnableLUA'
+    data: '1'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+    value: 'PromptOnSecureDesktop'
+    data: '1'
+    type: REG_DWORD

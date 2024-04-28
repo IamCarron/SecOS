@@ -1,0 +1,4 @@
+title: Block All Incoming Connections with Microsoft Defender Firewall
+description: To enhance network security, Microsoft Defender Firewall is configured to block all incoming connections.
+actions:
+  - !run: {exe: 'netsh', args: 'advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound'}

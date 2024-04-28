@@ -1,0 +1,5 @@
+---
+title: Enable PUA Protection
+description: Enable the protection against Potentially Unwanted Applications (PUA) using Microsoft Defender.
+actions:
+  - !run: {exe: 'powershell', args: '-Command "Set-MpPreference -PUAProtection Enabled"'}

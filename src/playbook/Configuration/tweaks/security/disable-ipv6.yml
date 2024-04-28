@@ -1,0 +1,10 @@
+---
+title: Disable IPv6
+description: As IPv6 may introduce security vulnerabilities in some network environments, it is disabled to improve security.
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\services\tcpip6\parameters'
+    value: 'DisabledComponents'
+    data: '0'
+    type: REG_DWORD
+  - !run: {exe: 'powershell', args: 'Get-NetAdapterBinding –ComponentID “ms_tcpip6” | disable-NetAdapterBinding –ComponentID “ms_tcpip6” –PassThru'}
