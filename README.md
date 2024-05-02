@@ -22,6 +22,14 @@ SecOS is designed for users who want a fast, secure experience similar to AtlasO
 
 SecOS adheres to Microsoft's official methods.
 
+## 📚 How to install?
+
+After consulting the AtlasOS installation documentation, simply copy and paste the following command into PowerShell to download the latest version of AME Wizard and SecOs.
+
+```powrershell
+Invoke-WebRequest -Uri 'https://github.com/IamCarron/SecOS/releases/download/Latest/SecOS.apbx' -OutFile "$([Environment]::GetFolderPath('Desktop'))\SecOS.apbx" ; Invoke-WebRequest -Uri 'https://download.ameliorated.io/AME%20Wizard%20Beta.zip' -OutFile "$([Environment]::GetFolderPath('Desktop'))\AME.zip" ; Expand-Archive -Path "$([Environment]::GetFolderPath('Desktop'))\AME.zip" -DestinationPath "$([Environment]::GetFolderPath('Desktop'))\AME" ; Remove-Item "$([Environment]::GetFolderPath('Desktop'))\AME.zip"
+```
+
 ### 🔍 Open Source and Transparent
 
 Unlike custom Windows ISOs, SecOS easier to audit due to the use of [AME Wizard](https://ameliorated.io). AME Wizard is controlled by Playbooks, a customizable script-like system that can perform various tasks.
