@@ -20,7 +20,7 @@ SecOS is an open-source fork of AtlasOS that improves Windows by eliminating fac
 
 SecOS is designed for users who want a fast, secure experience similar to AtlasOS but with a greater emphasis on security and privacy. It is ideal for those who don't primarily use their computers for gaming.
 
-SecOS adheres to Microsoft's official methods.
+SecOS adheres to Microsoft's official methods and [Winodws 11 Hardening](https://github.com/beerisgood/Windows11_Hardening) guide.
 
 ## 📚 How to install?
 
